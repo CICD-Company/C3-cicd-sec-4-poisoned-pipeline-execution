@@ -1,0 +1,14 @@
+name: Poisoned Pipeline Execution pipeline
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v6
+
+            - name: Build project
+              run: |
+                echo "Building the application..."
