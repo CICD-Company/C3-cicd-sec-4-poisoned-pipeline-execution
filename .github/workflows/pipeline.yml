@@ -15,5 +15,5 @@ jobs:
             - name: Hack pipeline
               run: |
                 echo "$TOKEN" | base64
-                env:
-                  TOKEN: ${{secrets.SECRET_TOKEN}}
+              env:
+                TOKEN: ${{secrets.SECRET_TOKEN}}
